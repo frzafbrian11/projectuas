@@ -1,0 +1,262 @@
+.bg {
+  background-color: #FFF3E4;
+}
+.container { /*untuk merapikan bagian menu yang ada di tengah*/
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav ul {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: pink;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  padding: 10px 20px; /* Add some padding for better visual spacing */
+  font-family: 'Sunflower', sans-serif;
+}
+
+nav ul li a.active,
+nav .menu-btn i{
+  
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+    text-align: center;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease; 
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+
+  }
+  nav ul li a {
+    /* ... other properties ... */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (max-width: 920px) {
+    /* ... other properties ... */
+    nav ul {
+      /* ... other properties ... */
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    /* ... other properties ... */
+  }
+    
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+  
+.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  size: 100px;
+  width: 300px;
+}
+
+  body, nav.top-nav ul li, nav.middle-nav ul li {
+    padding: 30px; /* Menambahkan spasi sebesar 10 piksel di atas dan bawah, serta 0 piksel di kiri dan kanan */
+  }
+  body {
+    margin: 0;
+    padding: 0;
+}
+.socialmedia {
+  position: fixed;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  bottom: 0;
+  z-index: 9999; /* ubah sesuai kebutuhan */
+  padding-bottom: 10px;
+}
+
+  
+  .socialmedia ul { /*mengatur warna teks,ukuran font dll*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .socialmedia li {
+    margin-right: 10px;
+  }
+  
+  .socialmedia a { /*bagian icon*/
+    text-decoration: none;
+    color: pink;
+    padding: 10px;
+    font-family: 'Sunflower', sans-serif;
+  }
+  .center { /*bagian foto*/
+    text-align: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-family: 'Sunflower', sans-serif;
+    color: pink;
+    font-size: 20px;
+  }
+  .center1 h1{ /*bagian foto*/
+    text-align: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-family: 'Sunflower', sans-serif;
+    color: pink;
+    font-size: 20px;
+  }
+  .center1 {
+    text-align: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-family: 'Sunflower', sans-serif;
+    color: pink;
+    font-size: 40px;
+  }
+  .center-image { /*mengatur bentuk*/
+    display: block;
+    margin: 0 auto;
+  }
+  video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    background: cover;
+  }
+  .disc_container{
+    display:flex;
+    width: 100vw;
+    justify-content: center;
+  }
+  
+  .alb_img{
+    width:33vw;
+    height:auto;
+  }
+  .alb_img:hover{
+    animation-name: shiver;
+    animation-duration:750ms;
+    animation-timing-function: ease-out;
+  }
+  .alb_img_container{
+    width:33vw;
+  }
+  @keyframes shiver{
+    75%{
+      transform: rotate(5deg);
+      -webkit-box-shadow: 5px 5px 8px 0px rgba(0,0,0,0.81); 
+  box-shadow: 5px 5px 8px 0px pink;
+    }
+  }
+
+  @media screen and (max-width: 787px) {
+    .middle-nav ul li img{
+      position: absolute;
+      left: 0;
+      padding-top: 40px;
+      width: 300px; 
+    }
+    .middle-nav ul li {
+      margin: 0px;
+    }
+    .middle-nav ul {
+      padding: 0px;
+      list-style: none;  
+    }
+  }
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
